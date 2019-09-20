@@ -2,11 +2,16 @@ package com.openclassrooms.magicgithub.api;
 
 import com.openclassrooms.magicgithub.model.User;
 import java.util.List;
+
+import static com.openclassrooms.magicgithub.api.FakeApiServiceGenerator.generateFakeUsers;
 import static com.openclassrooms.magicgithub.api.FakeApiServiceGenerator.generateUsers;
+
 
 public class FakeApiService implements ApiService {
 
     private List<User> users = generateUsers();
+    private List<User> fake_users = generateFakeUsers();
+
 
     /**
      * Return a list of {@link User}
